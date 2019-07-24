@@ -1612,7 +1612,11 @@ Ingenieurbüro ing-rb, &lt;i&gt;mail@ing-rb.de&lt;/i&gt;&lt;/p&gt;&lt;/author&gt
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.2032" drill="0">
+</class>
+<class number="1" name="gnd" width="0.4064" drill="0">
+</class>
+<class number="2" name="vcc" width="0.4064" drill="0">
 </class>
 </classes>
 <parts>
@@ -1703,7 +1707,7 @@ Ingenieurbüro ing-rb, &lt;i&gt;mail@ing-rb.de&lt;/i&gt;&lt;/p&gt;&lt;/author&gt
 <junction x="43.18" y="88.9"/>
 </segment>
 </net>
-<net name="5V" class="0">
+<net name="5V" class="2">
 <segment>
 <wire x1="83.82" y1="40.64" x2="96.52" y2="40.64" width="0.1524" layer="91"/>
 <label x="91.44" y="43.18" size="1.778" layer="95" rot="R180"/>
