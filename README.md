@@ -12,4 +12,6 @@ Similar to the Switchless Mod code for Sega Saturn (https://github.com/sebknzl/s
 
 Code was typed in the Adrduino IDE, you can find the pins config on the source code.
 
-An EAGLE design for an easy installation is comming.
+There's an untested PCB desing for and easy installation, maybe it doesn't fit on all revision boards.
+
+(./PCB.png)
