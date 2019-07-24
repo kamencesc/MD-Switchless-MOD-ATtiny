@@ -14,4 +14,4 @@ Code was typed in the Adrduino IDE, you can find the pins config on the source c
 
 There's an untested PCB desing for and easy installation, maybe it doesn't fit on all revision boards.
 
-[PCB](./PCB.png)
+![PCB](./PCB.png)
