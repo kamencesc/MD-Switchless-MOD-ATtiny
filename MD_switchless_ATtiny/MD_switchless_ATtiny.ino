@@ -28,6 +28,11 @@ const int led2 = 3;
 const int country = 0;
 const int herz = 4;
 
+//Bicolor LED config
+//1 = Common Anode
+//0 = Common Catode
+const int LEDs=0; 
+
 int btnState = 0;
 int btnPress = 0;
 
@@ -67,22 +72,22 @@ void changeRegion (int val) {
     case 1:                         //EU
       digitalWrite(country, LOW );
       digitalWrite(herz, HIGH );
-      digitalWrite(led1, LOW );
-      digitalWrite(led2, HIGH );
+      digitalWrite(led1, LEDs ? LOW : HIGH );
+      digitalWrite(led2, LEDs ? HIGH : LOW );
       EEPROM.write(address, region);
       region++;
     case 2:                         //USA
       digitalWrite(country, HIGH );
       digitalWrite(herz, HIGH );
-      digitalWrite(led1, HIGH );
-      digitalWrite(led2, HIGH );
+      digitalWrite(led1, LEDs ? HIGH : LOW );
+      digitalWrite(led2, LEDs ? HIGH : LOW );
       EEPROM.write(address, region);
       region++;
     case 3:                         //JAPAN
       digitalWrite(country, HIGH );
       digitalWrite(herz, LOW );
-      digitalWrite(led1, HIGH );
-      digitalWrite(led2, LOW );
+      digitalWrite(led1, LEDs ? HIGH : LOW );
+      digitalWrite(led2, LEDs ? LOW : HIGH );
       EEPROM.write(address, region);
       region = 1;
   }
@@ -95,6 +100,15 @@ void loop() {
     while (!btnState) {             //while btn is pressed
       delay(200);                   //delay of 200ms
       timepress++;                  //timepress increment
+      if (timepress >= 10) {        //if +200ms starts a LED animation
+        if (timepress % 3) {        //LED change color each 600ms
+            digitalWrite(led1, HIGH );
+            digitalWrite(led2, LOW );
+        } else {
+            digitalWrite(led1, LOW );
+            digitalWrite(led2, HIGH );
+        }
+      }
       btnState = digitalRead(btn);  //read btn again
     }
     if (timepress >= 10) {          //if timepress 10*200ms = 2000ms = 2 seconds
