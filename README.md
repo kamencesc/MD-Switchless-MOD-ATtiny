@@ -1,4 +1,5 @@
 # UNTESTED
+Note: After programming the Attiny, the RST pin is used as a in/out pin, so maybe you can reprogram it in some ways.
 
 # MD Switchless MOD ATtiny
 Sega Mega Drive/Genesis Switchless mod with an ATtiny85
