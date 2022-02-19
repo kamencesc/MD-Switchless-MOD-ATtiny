@@ -5,6 +5,7 @@
 // Board by: Kamencesc
 //
 // Site: http://www.kamencesc.com/
+// Git-hub: https://github.com/kamencesc/MD-Switchless-MOD-ATtiny
 // 19-02-2021
 //--------------------------------------------------------------------
 //    * ATtiny25/45/85 pinout
