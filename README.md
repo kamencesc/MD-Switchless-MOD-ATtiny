@@ -16,7 +16,3 @@ Code was typed in the Adrduino IDE, you can find the pins config on the source c
 There's an untested PCB desing for and easy installation, maybe it doesn't fit on all revision boards.
 
 ![PCB](./PCB.png)
-
-# RE programming
-As you can see, RST pin is used as a IO pin, so you can't program the attiny85 again as usual.
-You need to make a High Voltage fuse-reset as you can see there: (https://sites.google.com/site/wayneholder/attiny-fuse-reset)
