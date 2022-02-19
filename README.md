@@ -1,5 +1,5 @@
 # UNTESTED
-Note: After programming the Attiny, the RST pin is used as a in/out pin, so maybe you can reprogram it in some ways.
+Note: After programming the Attiny, the RST pin is used as a in/out pin, so you need to make (or buy) a High Voltage Programmer to fuse-reset as you can see there: (https://sites.google.com/site/wayneholder/attiny-fuse-reset)
 
 # MD Switchless MOD ATtiny
 Sega Mega Drive/Genesis Switchless mod with an ATtiny85
