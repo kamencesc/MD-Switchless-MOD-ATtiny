@@ -5,27 +5,27 @@
 // Board by: Kamencesc
 //
 // Site: http://www.kamencesc.com/
-// 24-07-2019
+// 19-02-2021
 //--------------------------------------------------------------------
 //    * ATtiny25/45/85 pinout
 //                 __  __
-// LED1     5/A0 -| 1`´8 |- VCC
-// LED2     3/A3 -| 2  7 |- 2/A1    BTN
-// HERZ     4/A2 -| 3  6 |- 1       RST
-//           GND -|_4__5_|- 0       COUNTRY
+// RST      5/A0 -| 1`´8 |- VCC
+// BTN      3/A3 -| 2  7 |- 2/A1    LENGUAGE
+// HERZ     4/A2 -| 3  6 |- 1       LED1
+//           GND -|_4__5_|- 0       LED2
 //
 //--------------------------------------------------------------------
 
 #include <EEPROM.h>
 
 //config reset pins
-const int btn = 2;
-const int rst = 1 ;
+const int btn = 3;
+const int rst = 5 ;
 //config dual led pins
-const int led1 = 5;
-const int led2 = 3;
+const int led1 = 1;
+const int led2 = 0;
 //config mode pins
-const int country = 0;
+const int country = 2;
 const int herz = 4;
 
 //Bicolor LED config
@@ -36,7 +36,7 @@ const int LEDs=0;
 int btnState = 0;
 int btnPress = 0;
 
-//config fist region region: 1 for EU, 2 for USA, 3 for JAPAN
+//config first region region: 1 for EU, 2 for USA, 3 for JAPAN
 int region = 1;
 
 int timepress = 0;
@@ -116,7 +116,7 @@ void loop() {
       delay(10);                    //little delay
       digitalWrite(rst, HIGH);      //back to HIGH
     } else {
-      changeRegion(region);
+      changeRegion(region);         //timpress < 2 seconds than change region
     }
   }
 }
